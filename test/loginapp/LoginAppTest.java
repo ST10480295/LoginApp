@@ -1,3 +1,4 @@
+// Unit tests for the Login Application
 package loginapp;
 
 import org.junit.Test;
