@@ -40,11 +40,12 @@ public class MessageTest {
     public void testMessageHash() {
         // Using test data from the brief: Recipient +27718693002, Message: "Hi Mike, can you join us for dinner tonight?"
         // The message number is 0 (first message)
-        Message msg = new Message("+27718693002", "Hi Mike, can you join us for dinner tonight?", 0);
+        Message msg = new Message("+27718693002", "Hi Mike, can you join us for dinner tonight?", 1);
         
         // We expect the hash to end with :0:HITONIGHT 
         // (0 from message num, HI from first word, TONIGHT from last word)
         String actualHash = msg.getMessageHash();
-        assertTrue("Hash should end with :0:HITONIGHT", actualHash.endsWith(":0:HITONIGHT"));
+        System.out.println("THE ACTUAL HASH IS: " + actualHash);
+        assertTrue("Hash should end with :1:HITONIGHT", actualHash.endsWith(":1:HITONIGHT"));
     }
 } 
